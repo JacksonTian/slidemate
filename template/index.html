@@ -27,7 +27,7 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
       <% slides.forEach(function (slide) { %>
-        <section>
+        <section class="<%=slide.indexOf('<h1>') !== -1 ? "cover" : ""%>">
           <%-slide%>
         </section>
       <% }); %>
