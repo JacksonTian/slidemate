@@ -15,7 +15,21 @@
     "ejs": "*",
     "ncp": "*"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JacksonTian/slidemate.git"
+  },
   "author": "Jackson Tian",
-  "license": "MIT"
+  "license": "MIT",
+  "directories": {
+    "doc": "doc",
+    "example": "example"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "slides",
+    "presentation",
+    "ppt",
+    "keynote"
+  ]
 }
