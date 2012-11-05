@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title><%=title%></title>
+    <title>slidemate 幻灯片伴侣</title>
     <meta name="description" content="">
     <meta name="author" content="Hakim El Hattab">
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -26,11 +26,39 @@
 
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
-      <% slides.forEach(function (slide) { %>
+      
         <section>
-          <%-slide%>
+          <h2>来源</h2>
+<p>slidemate可以将符合一定规则的markdown文件生成为幻灯片。
+</p>
+
         </section>
-      <% }); %>
+      
+        <section>
+          <h2>安装</h2>
+<p>通过npm安装即可，注意带<code>-g</code>标志，如果没有权限，请加<code>sudo</code>：
+</p>
+<pre><code>npm install slidemate -g</code></pre>
+
+        </section>
+      
+        <section>
+          <h2>使用</h2>
+<pre><code>slidemate -f ./README.md</code></pre>
+<p>该命令会在文档的目录下生成slides目录，打开其中的index.html即可查看生成的幻灯片。<br>你也可以通过<code>-o</code>指定输出目录。如：
+</p>
+<pre><code>slidemate -f ./README.md -o ~/output/</code></pre>
+<p>您可以点击<a href="http://html5ify.com/slidemate">README</a>，查看本README.md生成的幻灯片。
+</p>
+
+        </section>
+      
+        <section>
+          <h2>License</h2>
+<p>The MIT license。请自由享用。</p>
+
+        </section>
+      
       </div>
     </div>
 
