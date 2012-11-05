@@ -1,0 +1,21 @@
+{
+  "name": "slidemate",
+  "version": "0.0.1",
+  "description": "slide mate",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "commander": "*",
+    "marked": "*",
+    "ejs": "*",
+    "ncp": "*"
+  },
+  "repository": "",
+  "author": "Jackson Tian",
+  "license": "MIT"
+}

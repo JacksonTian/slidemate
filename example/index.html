@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>EDP lib - EDP基础库建设与维护</title>
+    <meta name="description" content="">
+    <meta name="author" content="Hakim El Hattab">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="reveal.js/css/theme/default.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+      document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+      
+        <section>
+          <h2>EDP基础库建设与维护</h2>
+<h3>不四</h3>
+
+        </section>
+      
+        <section>
+          <h2>Why ?</h2>
+<hr>
+<ul>
+<li>提升工作效率   </li>
+<li>减少劣质模块引入的bug   </li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2>How ?</h2>
+<hr>
+<ul>
+<li>内部模块质量保证</li>
+<li>新版内部npm支持</li>
+<li>各个项目组推动落地</li>
+<li>基础库维护</li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2>内部模块质量保证</h2>
+<hr>
+<ul>
+<li>完备的测试</li>
+<li>注释与文档</li>
+<li>持续优化</li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2>完备的测试</h2>
+<hr>
+<ul>
+<li>覆盖率保证   <ul>
+<li>95%+的覆盖率  </li>
+</ul>
+</li>
+<li>异常情况测试  <ul>
+<li>内部异常的测试覆盖     </li>
+<li>外部依赖异常测试覆盖  </li>
+<li>网络情况异常测试覆盖   </li>
+<li>...</li>
+</ul>
+</li>
+<li>底层模块benchmark    <ul>
+<li>如果是底层服务模块，最好附带性能测试报告   </li>
+</ul>
+</li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2>注释与文档</h2>
+<hr>
+<ul>
+<li>完备的注释  <ul>
+<li>降低模块接手人的维护成本       </li>
+<li>通过<code>dox</code> or <code>doxmate</code>进行文档的生成   </li>
+</ul>
+</li>
+<li>健全的文档   <ul>
+<li>方便使用者使用，提升使用效率  </li>
+</ul>
+</li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2>持续优化</h2>
+<hr>
+<ul>
+<li>每个模块都有人负责   </li>
+<li>及时进行bug fix  </li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2>新版内部npm支持</h2>
+<hr>
+<ul>
+<li>模块发布与审核机制   </li>
+<li>模块更新检查  </li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2>发布与审核机制</h2>
+<hr>
+<ul>
+<li>三方包同步需要提交申请  <ul>
+<li>保证只有高质量三方包能够进入生产环境 </li>
+<li>减少有隐藏bug的<em>定时炸弹</em>  </li>
+</ul>
+</li>
+<li>二方包发布审核   <ul>
+<li>内部开发模块必须通过npm-web平台发布   </li>
+<li>保证内部模块高质量  </li>
+</ul>
+</li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2>npm-web</h2>
+<hr>
+<p><img src="/images/edp_lib/npm_web.png" alt="npm-web">    
+
+
+</p>
+
+        </section>
+      
+        <section>
+          <h2>模块更新检查</h2>
+<hr>
+<ul>
+<li>通过npm-web与Makefile管理模块更新通知<ul>
+<li><code>npm-web</code>上设置模块是否必须更新    </li>
+<li><code>Makefile</code>中写入检查更新的项  </li>
+</ul>
+</li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2>更新检查</h2>
+<hr>
+<p><img src="/images/edp_lib/notify.png" alt="notify"><br><img src="/images/edp_lib/check.png" alt="check">  
+
+</p>
+
+        </section>
+      
+        <section>
+          <h2>落地</h2>
+<hr>
+<ul>
+<li>内部模块介绍推广  </li>
+<li>用基础库里面的模块替换应用方实现  </li>
+<li>应用方反哺基础库  </li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2>内部模块推广介绍</h2>
+<hr>
+<ul>
+<li>内部分享形式  <ul>
+<li>show me the code   </li>
+<li>ohter ...</li>
+</ul>
+</li>
+<li>项目技术负责人推广     </li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2>模块落地</h2>
+<hr>
+<ul>
+<li>将应用内可以用模块替换的部分用内部模块替换  <ul>
+<li>redis =&gt; mredis  </li>
+<li>itier =&gt; itierskin  </li>
+<li>... </li>
+</ul>
+</li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2>反哺基础库</h2>
+<hr>
+<ul>
+<li>应用提取基础模块，供其他项目重用  <ul>
+<li>itierskin  </li>
+<li>taobaosession  </li>
+<li>lastdate  </li>
+<li>...   </li>
+</ul>
+</li>
+<li>解决项目碰到的难题，作为技术积累  <ul>
+<li>mredis  </li>
+<li>node-hsf   </li>
+<li>...  </li>
+</ul>
+</li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2>基础库维护</h2>
+<hr>
+<ul>
+<li>每个模块有自己的负责人  </li>
+<li>应用内模块使用者反馈    </li>
+<li>基础库维护者保证响应速度  </li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2>模块维护者</h2>
+<hr>
+<ul>
+<li>模块后续功能性开发与维护性开发  </li>
+<li>迅速响应  </li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2>应用方使用者</h2>
+<hr>
+<ul>
+<li>保证模块使用方式的正确性  </li>
+<li>对使用到的模块进行反馈  </li>
+<li>反哺基础库  </li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2>基础库维护者</h2>
+<hr>
+<ul>
+<li>新版内部npm与npm-web功能开发完善  </li>
+<li>推动基础库落地与反馈  </li>
+<li>维护内部npm稳定运行  </li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2>Target ?</h2>
+<hr>
+<ul>
+<li>新版内部npm替换旧版   <ul>
+<li>摒弃旧版npm，通过新版npm控制内部模块质量  </li>
+</ul>
+</li>
+<li>基础库内部各个应用完全落地  <ul>
+<li>各应用全面通过基础库内模块提升效率  </li>
+</ul>
+</li>
+<li>基础库维护与质量保证  <ul>
+<li>完善已有库的质量： 测试、文档   </li>
+<li>完善基础库发布标准   </li>
+</ul>
+</li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2>Resource ?</h2>
+<hr>
+<ul>
+<li>dev x 2 （兼职）<ul>
+<li>最好是对现有项目或者基础模块有一定了解  </li>
+</ul>
+</li>
+</ul>
+
+        </section>
+      
+        <section>
+          <h2>Thanks</h2>
+
+        </section>
+      
+      </div>
+    </div>
+
+    <script src="reveal.js/lib/js/head.min.js"></script>
+    <script src="reveal.js/js/reveal.min.js"></script>
+
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+            keyboard: true,
+            rollingLinks: true,
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'zoom', // default/cube/page/concave/zoom/linear/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+  </body>
+</html>
