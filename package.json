@@ -3,11 +3,11 @@
   "version": "0.0.1",
   "description": "slide mate",
   "main": "index.js",
-  "directories": {
-    "doc": "doc"
-  },
   "scripts": {
     "test": "mocha"
+  },
+  "bin": {
+    "slidemate": "./bin/slidemate"
   },
   "dependencies": {
     "commander": "*",

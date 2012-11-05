@@ -27,13 +27,13 @@ program.on('--help', function(){
 
 // parse argv
 program.parse(process.argv);
-
 if (!program.file) {
   console.log('$ slidemate -f <file.md> [-o <folder>]');
+  return;
 }
 
 if (!program.output) {
-  program.output = path.resolve(program.folder, 'doc');
+  program.output = path.resolve(program.file, '..', 'slides');
 }
 
 program.output = path.resolve(program.output);
