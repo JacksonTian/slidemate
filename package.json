@@ -1,6 +1,6 @@
 {
   "name": "slidemate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "slide mate",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "commander": "*",
     "marked": "*",
     "ejs": "*",
-    "ncp": "*"
+    "ncp": "0.4.2"
   },
   "repository": {
     "type": "git",
